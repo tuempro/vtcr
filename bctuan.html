@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Kế hoạch làm việc theo tuần</title>
+<style>
+  html, body { margin: 0; padding: 0; height: 100%; width: 100%; overflow: hidden; }
+  iframe { border: 0; width: 100%; height: 100%; display: block; }
+</style>
+</head>
+<body>
+<!--
+  Trang nhúng để MỞ FORM MÀ KHÔNG THẤY banner của Google
+  ("Ứng dụng này do một người dùng Google Apps Script tạo").
+  Nguyên tắc: banner đó chỉ hiện khi mở TRỰC TIẾP link web app; khi link
+  web app được nhúng vào 1 trang khác bằng iframe thì banner không hiện
+  (code đã bật XFrameOptionsMode.ALLOWALL trong doGet() để cho phép nhúng).
+
+  CÁCH CHẠY — LÀM THEO THỨ TỰ:
+  Bước 1: Deploy web app như bình thường, copy link web app (dạng
+          https://script.google.com/macros/s/.../exec).
+  Bước 2: Thay WEB_APP_URL_DUOI_DAY ở cuối file này bằng link đó, lưu lại.
+  Bước 3a (chỉ để anh tự kiểm tra trên máy mình): nhấp đúp file này để mở
+          bằng trình duyệt — form hiện ra, không có banner. File nằm trên
+          máy anh nên chỉ mình anh mở được, nhân viên không mở được file này.
+  Bước 3b (để gửi cho nhân viên): đưa file này lên 1 chỗ host tĩnh rồi gửi
+          link của trang đó cho nhân viên. Cách dễ nhất, không cần tài khoản
+          mới ngoài Google:
+          - Google Sites: vào sites.google.com → Site trống mới → Chèn →
+            Nhúng → Theo URL → dán link web app → Xuất bản. (Cách này không
+            cần file embed.html, Sites tự nhúng link vào iframe.)
+          - Hoặc GitHub Pages (miễn phí): tạo repository mới, tải file này
+            lên với tên index.html, bật Settings → Pages → link sẽ có dạng
+            https://<tên-tài-khoản>.github.io/<tên-repo>/.
+          - Hoặc Netlify Drop: kéo-thả file này vào drop.netlify.com là có
+            link ngay.
+          KHÔNG đưa file này lên Google Drive để chạy: Drive chỉ cho xem/tải
+          file HTML, không chạy nó thành trang web được.
+
+  GIỮ LINK ỔN ĐỊNH: khi cập nhật code, dùng Triển khai → Quản lý lượt triển
+  khai → Sửa → Phiên bản mới → Deploy để link web app cũ giữ nguyên. Nếu
+  tạo lượt triển khai MỚI thì link đổi, phải sửa lại iframe src ở đây (và
+  sửa lại link rút gọn nếu có, xem hướng dẫn).
+
+  Lưu ý: mở trực tiếp link web app thì banner vẫn hiện (đó là cảnh báo của
+  Google, không phải lỗi của form, và bấm dấu X ở cuối banner cũng tắt được
+  trong phiên đó).
+-->
+<iframe src="https://script.google.com/macros/s/AKfycbxsGNhctsTe8LvXBImBjPN5IaVRb2bZTes2V2s-oNjy/exec" title="Kế hoạch làm việc theo tuần"></iframe>
+</body>
+</html>
